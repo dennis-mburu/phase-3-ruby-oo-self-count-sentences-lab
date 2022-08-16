@@ -19,10 +19,14 @@ class String
     # puts self
     split_sent_array = self.split(/[.!?]/)
     # pp split_sent_array
-    split_sent_array.delete_if {|elem| elem == ""}
+    # split_sent_array.delete_if {|elem| elem == ""}
+    split_sent_array.delete_if {|elem| elem.empty?}
+
     # pp split_sent_array
     no = split_sent_array.count
     # binding.pry
+
+    # self.split(/[.!?]/).delete_if {|elem| elem == ""}.count
   end
 end
 
